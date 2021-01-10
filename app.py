@@ -30,7 +30,7 @@ def main():
     
     st.markdown(html_temp, unsafe_allow_html=True)
     
-    no_follow = st.text_input("Enter no_follow", "Enter a Number")
+    no_follow = st.text_input("Enter number of followers", "Enter a Number")
     author_verified = st.text_input("Enter author_verified", "Enter a Number")
     author_comment_karma = st.text_input("Enter author_comment_karma", "Enter a Number")
     author_link_karma = st.text_input("Enter author_link_karma", "Enter a Number")
