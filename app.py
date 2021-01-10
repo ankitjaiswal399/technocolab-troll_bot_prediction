@@ -24,7 +24,7 @@ def main():
     html_temp = """
         
     <div class = "main">
-       <h1> Bot tweet prediction</h1>
+       <h1> Troll-Bot prediction</h1>
     </div>
     """
     
