@@ -10,6 +10,15 @@ import pickle
 import numpy as np
 import pandas as pd
 
+model = pickle.load(open('model.pkl', 'rb'))
+
+def predict_genre(no_follow, author_verified, author_comment_karma,author_link_karma, over_18, is_submitter):
+    input = pd.DataFrame(np.array([[no_follow, author_verified, author_comment_karma,author_link_karma, over_18,is_submitter]]).astype(np.float64))
+    prediction = model.predict(input)
+
+    return prediction
+    
+
 def main():
     
     html_temp = """
@@ -21,7 +30,12 @@ def main():
     
     st.markdown(html_temp, unsafe_allow_html=True)
     
-    tweet = st.text_area("Enter the tweet")
+    no_follow = st.text_input("Enter no_follow", "True")
+    author_verified = st.text_input("Enter author_verified", "False")
+    author_comment_karma = st.text_input("Enter author_comment_karma", "79761")
+    author_link_karma = st.text_input("Enter author_link_karma", "942")
+    over_18 = st.text_input("Enter over_18", "False")
+    is_submitter = st.text_input("Enter is_submitter", "False")
     
     bot_html = """
         <h2 style = "color: red"> Bot </h2>
@@ -33,8 +47,13 @@ def main():
     
     if st.button("Predict"):
         
-        st.markdown(bot_html, unsafe_allow_html=True)
-        st.markdown(troll_html, unsafe_allow_html=True)
+        output = predict_genre(no_follow, author_verified, author_comment_karma,author_link_karma, over_18, is_submitter)
+        
+        print(output)
+        if output == 0.0:
+            st.markdown(bot_html, unsafe_allow_html=True)
+        elif output == 1.0:
+            st.markdown( troll_html, unsafe_allow_html=True)
         
 if __name__ == "__main__":
     main()
