@@ -30,12 +30,12 @@ def main():
     
     st.markdown(html_temp, unsafe_allow_html=True)
     
-    no_follow = st.text_input("Enter no_follow", "True")
-    author_verified = st.text_input("Enter author_verified", "False")
-    author_comment_karma = st.text_input("Enter author_comment_karma", "79761")
-    author_link_karma = st.text_input("Enter author_link_karma", "942")
-    over_18 = st.text_input("Enter over_18", "False")
-    is_submitter = st.text_input("Enter is_submitter", "False")
+    no_follow = st.text_input("Enter no_follow", "Enter a Number")
+    author_verified = st.text_input("Enter author_verified", "Enter a Number")
+    author_comment_karma = st.text_input("Enter author_comment_karma", "Enter a Number")
+    author_link_karma = st.text_input("Enter author_link_karma", "Enter a Number")
+    over_18 = st.text_input("Enter over_18", "Enter a Number")
+    is_submitter = st.text_input("Enter is_submitter", "Enter a Number")
     
     bot_html = """
         <h2 style = "color: red"> Bot </h2>
