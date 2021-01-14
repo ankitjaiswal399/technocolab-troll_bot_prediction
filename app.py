@@ -38,20 +38,12 @@ def main():
     st.markdown(html_temp, unsafe_allow_html=True)
     
     
-    no_follow = st.text_input(st.markdown("""<label style = "color : white;"> Enter the number of followers </label>""", unsafe_allow_html=True), "Write 1 for True and 0 for False")
+    no_follow = st.text_input("Enter the number of followers", "Write 1 for True and 0 for False")
     author_verified = st.text_input("Is author verified? ", "Write 1 for True and 0 for False")
     author_comment_karma = st.text_input("Enter author_comment_karma", "Looking for a Number")
     author_link_karma = st.text_input("Enter author_link_karma", "Looking for a Number")
     over_18 = st.text_input("Is author over 18?", "Write 1 for True and 0 for False")
     is_submitter = st.text_input("Enter is_submitter", "Write 1 for True and 0 for False")
-    
-    st.markdown("""
-        <style>
-            .st-text_input>label{
-                color: black;
-            }
-        </style>
-    """, unsafe_allow_html=True)
     
     bot_html = """
         <h2 style = "color: red"> Bot </h2>
