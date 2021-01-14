@@ -31,7 +31,7 @@ def main():
     html_temp = """
         
     <div class = "main">
-       <h1> Troll-Bot prediction</h1>
+       <h1 style="color: white;"> Troll-Bot prediction</h1>
     </div>
     """
     st.markdown(page_bg_img, unsafe_allow_html=True)
