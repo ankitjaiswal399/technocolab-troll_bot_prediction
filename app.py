@@ -37,7 +37,7 @@ def main():
     st.markdown(page_bg_img, unsafe_allow_html=True)
     st.markdown(html_temp, unsafe_allow_html=True)
     
-    st.markdown("""<label style = "color : white;"> Enter the number of followers </label>""")
+    st.markdown("""<label style = "color : white;"> Enter the number of followers </label>""", unsafe_allow_html=True)
     no_follow = st.text_input("", "Write 1 for True and 0 for False")
     author_verified = st.text_input("Is author verified? ", "Write 1 for True and 0 for False")
     author_comment_karma = st.text_input("Enter author_comment_karma", "Looking for a Number")
@@ -51,7 +51,8 @@ def main():
                 color: black;
             }
         </style>
-    """)
+    """, unsafe_allow_html=True)
+    
     bot_html = """
         <h2 style = "color: red"> Bot </h2>
     """
