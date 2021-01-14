@@ -47,7 +47,7 @@ def main():
     st.markdown("""
         <style>
             .st-text_input>label{
-                color: white;
+                color: black;
             }
         </style>
     """)
