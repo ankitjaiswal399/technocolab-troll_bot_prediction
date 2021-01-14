@@ -43,6 +43,13 @@ def main():
     over_18 = st.text_input("Is author over 18?", "Write 1 for True and 0 for False")
     is_submitter = st.text_input("Enter is_submitter", "Write 1 for True and 0 for False")
     
+    st.markdown("""
+        <style>
+            .text_input>label{
+                color: white;
+            }
+        </style>
+    """)
     bot_html = """
         <h2 style = "color: red"> Bot </h2>
     """
