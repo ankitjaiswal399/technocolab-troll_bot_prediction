@@ -25,6 +25,7 @@ def main():
         <style> body { 
                 background-image: url("https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1895&q=80"); 
                 background-size: cover; 
+                color : white;
                 } 
                 </style> '''
 
@@ -45,7 +46,7 @@ def main():
     
     st.markdown("""
         <style>
-            .stTextInput>label{
+            .st-text_input>label{
                 color: white;
             }
         </style>
