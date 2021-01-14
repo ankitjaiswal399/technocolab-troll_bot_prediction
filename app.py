@@ -27,7 +27,7 @@ def main():
        <h1> Troll-Bot prediction</h1>
     </div>
     """
-    
+    page_bg_img = ''' <style> body { background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366"); background-size: cover; } </style> ''' st.markdown(page_bg_img, unsafe_allow_html=True)
     st.markdown(html_temp, unsafe_allow_html=True)
     
     no_follow = st.text_input("Enter the number of followers", "Write 1 for True and 0 for False")
