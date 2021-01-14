@@ -22,17 +22,16 @@ def predict_genre(no_follow, author_verified, author_comment_karma,author_link_k
 def main():
     
     page_bg_img = ''' 
-    <style> body{ 
-                background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366"); 
+        <style> body { 
+                background-image: url("https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1895&q=80"); 
                 background-size: cover; 
-             }
-     </style> 
-    ''' 
+                } 
+                </style> '''
+
     html_temp = """
-        
-    <div class = "main">
-       <h1 style="color: white;"> Troll-Bot prediction</h1>
-    </div>
+        <div style="background-color:#025246 ;padding:10px">
+        <h2 style="color:white;text-align:center;"> Bot-Troll App </h2>
+        </div>
     """
     st.markdown(page_bg_img, unsafe_allow_html=True)
     st.markdown(html_temp, unsafe_allow_html=True)
