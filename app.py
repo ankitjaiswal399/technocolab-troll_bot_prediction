@@ -21,13 +21,20 @@ def predict_genre(no_follow, author_verified, author_comment_karma,author_link_k
 
 def main():
     
+    page_bg_img = ''' 
+    <style> body{ 
+                background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366"); 
+                background-size: cover; 
+             }
+     </style> 
+    ''' 
     html_temp = """
         
     <div class = "main">
        <h1> Troll-Bot prediction</h1>
     </div>
     """
-    page_bg_img = ''' <style> body { background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366"); background-size: cover; } </style> ''' st.markdown(page_bg_img, unsafe_allow_html=True)
+    st.markdown(page_bg_img, unsafe_allow_html=True)
     st.markdown(html_temp, unsafe_allow_html=True)
     
     no_follow = st.text_input("Enter the number of followers", "Write 1 for True and 0 for False")
