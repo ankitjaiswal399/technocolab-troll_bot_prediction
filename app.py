@@ -58,9 +58,9 @@ def main():
         output = predict_genre(no_follow, author_verified, author_comment_karma,author_link_karma, over_18, is_submitter)
         
         print(output)
-        if output == 0.0:
+        if output <= 0.5:
             st.markdown(bot_html, unsafe_allow_html=True)
-        elif output == 1.0:
+        elif output > 0.5:
             st.markdown( troll_html, unsafe_allow_html=True)
         
 if __name__ == "__main__":
