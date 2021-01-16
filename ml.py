@@ -18,7 +18,7 @@ from sklearn.metrics import accuracy_score
 X = pd.read_csv('X_train.csv')
 Y = pd.read_csv('y_train.csv')
 
-model = LogisticRegression(random_state = 1)
+model = LogisticRegression(random_state = 10)
 model.fit(X,Y)
 
 pickle.dump(model, open('model.pkl', 'wb'))
