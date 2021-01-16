@@ -27,10 +27,10 @@ def main():
     </style> '''
     st.markdown(page_bg_img, unsafe_allow_html=True)
     
-    html_temp = """    
-    <div class = "main">
-       <h1> Bot tweet prediction</h1>
-    </div>
+    html_temp = """
+        <div style="background-color:#025246 ;padding:10px">
+            <h2 style="color:white;text-align:center;"> Bot-Troll App </h2>
+        </div>
     """
     
     st.markdown(html_temp, unsafe_allow_html=True)
